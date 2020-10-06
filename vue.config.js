@@ -7,7 +7,8 @@ function resolve(dir) {
 
 // const name = 'Vue-template-demo' // page title
 
-const port = process.env.port || process.env.npm_config_port || 9528; // dev port
+// const port = process.env.port || process.env.npm_config_port || 9528; // dev port
+const port = 3000; // dev port
 module.exports = {
   publicPath: "/", // 部署应用包时的基本 URL
   outputDir: "dist", // 生产环境构建文件的目录
@@ -15,20 +16,20 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === "development", // 保存自动格式化
   productionSourceMap: false, // 生产环境管是否开启source map， false可以优化构建速度
   devServer: {
-    port: port,
+    port: 3000,
     open: true,
     overlay: {
       // 浏览器是否全屏展示警告/错误
       warnings: false,
       errors: true,
     },
-    proxy: {
+    /* proxy: {
       [process.env.VUE_APP_BASE_API]: {
         target: `https://astrorelay-dev.goodcloud.xyz`, // 开发服务器
         changeOrigin: true,
       },
-    },
-    // before: require('./mock/mock-server.js') //before方法：能够在其他所有的中间件之前执行自定义的中间件
+    }, */
+    before: require('./mock/mock-server') //before方法：能够在其他所有的中间件之前执行自定义的中间件
   },
   configureWebpack: {
     // name: name, // 在webpack的name字段中提供应用程序的标题，这样就可以在index.html中访问它来注入正确的标题。
