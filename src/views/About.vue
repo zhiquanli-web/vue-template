@@ -1,5 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+<div>
+  <button v-show="loginIn">logout</button>
+</div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      loginIn: true
+    }
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
