@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import { login, getInfo } from '@/api/user'
 export default {
   data() {
     return {
@@ -23,16 +22,17 @@ export default {
       }
     }
   },
-  mounted() {
-    getInfo().then(result => {
-      console.log(result)
-    })
-  },
   methods: {
     login() {
-      login(this.loginFrom).then(result => {
-        console.log('ss', result)
-      })
+      this.$store
+        .dispatch('user/login', this.loginForm)
+        .then(() => {
+          this.$router.push({ path: '/home' })
+          this.loading = false
+        })
+        .catch(() => {
+          this.loading = false
+        })
     }
   }
 }

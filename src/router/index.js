@@ -3,21 +3,17 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-// import Layout from "@/layout";
+import Layout from '@/layout'
 
 export const constantRoutes = [
-  {
-    path: '/',
-    redirect: '/login'
-  },
   {
     path: '/login',
     name: 'Login',
     component: () => import('@/views/login.vue')
-  }/*
+  },
   {
     path: '/',
-    // component: Layout,
+    component: Layout,
     redirect: '/home',
     children: [
       {
@@ -26,7 +22,7 @@ export const constantRoutes = [
         component: () => import('@/views/home.vue')
       }
     ]
-  } */
+  }
   /* {
     path: "/home",
     name: "Home",

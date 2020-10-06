@@ -5,5 +5,7 @@
 </template>
 
 <style lang="less">
-
+#nprogress .bar {
+  background: red !important; //自定义颜色
+}
 </style>

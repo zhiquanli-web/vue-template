@@ -7,7 +7,8 @@ import store from './store'
 import '@/icons'
 
 Vue.config.productionTip = false
-
+// permission
+import '@/permission' // permission control
 // mock
 if (process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock')
