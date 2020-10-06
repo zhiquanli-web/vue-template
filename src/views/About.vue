@@ -1,9 +1,9 @@
 <template>
-<div>
-  <button v-show="loginIn">logout</button>
-  <br/>
-  <svg-icon icon-class="device"/>
-</div>
+  <div>
+    <button v-show="loginIn">logout</button>
+    <br>
+    <svg-icon icon-class="device" />
+  </div>
 </template>
 
 <script>
@@ -13,6 +13,9 @@ export default {
       loginIn: true
     }
   },
+  methods: {
+
+  }
 }
 </script>
 
