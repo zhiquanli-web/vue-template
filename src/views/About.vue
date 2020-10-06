@@ -1,6 +1,8 @@
 <template>
 <div>
   <button v-show="loginIn">logout</button>
+  <br/>
+  <svg-icon icon-class="device"/>
 </div>
 </template>
 
