@@ -1,24 +1,30 @@
 # vue-template
 
-## Project setup
+## 安装项目依赖
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+yarn
+or
+npm install
 ```
 
-### Compiles and minifies for production
+### 编译启动
+```
+yarn dev
+```
+
+### 编译打包
 ```
 yarn build
 ```
 
-### Run your unit tests
+### 测试代码
 ```
 yarn test:unit
 ```
 
+### 代码格式化
+```
+yarn lint -- --fix
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
