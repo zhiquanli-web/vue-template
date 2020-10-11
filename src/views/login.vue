@@ -1,9 +1,9 @@
 <template>
   <div>
-    <button v-show="loginIn">logout</button>
-    <br>
-    <svg-icon icon-class="device" />
-    <br>
+    <!-- test代码 -->
+    <!-- <button v-show="loginIn">logout</button> -->
+    <!-- svg icon -->
+    <!-- <svg-icon icon-class="device" /> -->
     username: <input v-model="loginForm.username" type="text"> <br>
     password: <input v-model="loginForm.password" type="password">
     <br>
@@ -15,16 +15,16 @@
 export default {
   data() {
     return {
-      loginIn: false,
+      // loginIn: false,
+      // admin or editor
       loginForm: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: 'admin'
       }
     }
   },
   methods: {
     login() {
-      console.log(this.loginForm)
       this.$store
         .dispatch('user/login', this.loginForm)
         .then(() => {
